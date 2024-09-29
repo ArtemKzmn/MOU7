@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапалка</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #121212; /* Тёмный фон */
+            color: #ffffff; /* Белый цвет для текста */
+        }
+        
+        #counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        #coin {
+            cursor: pointer;
+            width: 150px; /* Увеличенный размер */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="counter">0</div>
+    <img id="coin" src="логотип MOU7.jpg" alt="Монета">
+
+    <script>
+        let count = 0;
+
+        const counterElement = document.getElementById('counter');
+        const coinElement = document.getElementById('coin');
+
+        coinElement.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+    </script>
+
+</body>
+</html>
